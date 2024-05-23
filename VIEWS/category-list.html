@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Botànica</title>
+  <link rel="stylesheet" type="text/css" href="/../css/estils.css">
+</head>
+
+<body>
+  <header>
+    <nav class="categories">
+      <li><a href="#" onclick="loadContent(3)">Llavors</a></li>
+      <li><a href="#" onclick="loadContent(4)">Plantes</a></li>
+      <li><a href="#" onclick="loadContent(5)">Arbres</a></li>
+      <li><a href="#" onclick="loadContent(6)">Roses</a></li>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Contenido se cargará aquí -->
+  </main>
+
+  <script>
+    function loadContent(category) {
+      fetch(`../VIEWS/getProducts.php?category=${category}`) //category.html
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('main-content').innerHTML = data;
+          addProductClickListeners();
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function loadProfileEdit() {
+      // Lógica para cargar la página de edición de perfil aquí
+      fetch(`/VIEWS/editarPerfil.php`)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('main-content').innerHTML = data;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function addProductClickListeners() {
+      const productLinks = document.querySelectorAll('#main-content ul li a');
+      productLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          const productId = this.getAttribute('data-product-id');
+          loadProductDetails(productId);
+        });
+      });
+    }
+
+    function loadProductDetails(productId) {
+      fetch(`/VIEWS/detallsProducte.php?id=${productId}`)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('main-content').innerHTML = data;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+<!--- php borrat
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Llista de Categories</title>
+  <link rel="stylesheet" type="text/css" href="css/estils.css">
+</head>
+<body>
+
+  <main>
+
+    <h2>Categories</h2>
+    <ul>
+      <?php foreach ($categories as $category): ?>
+        <li><?php echo $category['nom']; ?><i><?php echo $category['descripcio']; ?></i></li>
+      <?php endforeach; ?>
+    </ul>
+  </main>
+
+  <footer>
+    <p><a href="/VIEWS/category-list.html">Per categoria</a>    --   <a href="/VIEWS/tots-list.html" >Llista completa</a>  </p>
+  </footer>
+</body>
+</html>
+-->

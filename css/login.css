@@ -1,0 +1,88 @@
+body,html {
+    height: 100%; /* Asegurar que ocupa todo el alto de la ventana */
+    margin: 0; /* Quitar márgenes */
+    padding: 0; /* Quitar padding */
+    background-image: url('img/fondo_registre.png');
+    background-repeat: no-repeat; /* Para que la imagen se muestre solo una vez */
+    background-position: center center; /* Para centrar la imagen en el medio de la página */
+    background-size: contain; /* Para que la imagen se ajuste al tamaño del contenedor manteniendo sus proporciones */
+
+    background-color:white; /* Un color de fondo en caso de que la imagen no cubra todo el espacio, por ejemplo, blanco. Cambia esto según lo que necesites. */
+
+}
+#login, #body2 {
+    height: 100%; /* Asegurar que ocupa todo el alto de la ventana */
+    margin: 0; /* Quitar márgenes */
+    padding: 0; /* Quitar padding */
+    background-image: url('img/fondo_login.png');
+    background-repeat: no-repeat; /* Para que la imagen se muestre solo una vez */
+    background-position: center center; /* Para centrar la imagen en el medio de la página */
+    background-size: contain; /* Para que la imagen se ajuste al tamaño del contenedor manteniendo sus proporciones */
+
+    background-color: rgb(250, 250, 224);
+}
+body{
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;  /* Añadir esta línea */
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}  
+
+
+label {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-left: 10px;
+    padding-left: 10px;
+  }
+  
+form {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+
+  }
+
+  
+  
+
+#register{
+    /*hazer que este a la derecha debajo*/
+
+    display: flex;
+    margin-left: auto; 
+    margin-right: auto;   	
+    border: 3px solid #ccc;
+    border-radius: 12px;
+    display: block;
+    position: static;
+    margin-top: 150px;
+}
+
+#seguent{
+    /*centrar del todo*/
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    border-left: 10px;
+    padding-left: 20px;
+
+
+}
+

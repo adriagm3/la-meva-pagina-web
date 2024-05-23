@@ -1,0 +1,267 @@
+header {
+  background-color: rgba(47, 168, 128, 0.74);
+}
+
+body {
+  background-color: rgba(127, 255, 212, 0.356);
+}
+
+
+nav {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 1.8em;
+  flex-wrap: wrap;
+
+}
+
+li {
+  list-style-type: none;
+  /* Esto quitará los bullet points */
+  margin-left: 30px;
+  /* Añade un margen inferior para separar los elementos */
+
+}
+
+i {
+  font-size: 0.6em;
+  margin-left: 10px;
+  color: grey;
+}
+
+#pagines_meves_link {
+  font-size: 1.2em !important;
+  color: rgb(145, 11, 11);
+  border: 2px solid bisque;
+  background-color: beige;
+  text-decoration: none;
+  padding: 6px;
+}
+
+
+/* Importa la font Roboto de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset de margin i padding per a tots els elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estableix Roboto com la font per defecte per a tot */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  /* Això afegeix una mica més d'espai entre línies de text */
+  padding: 20px;
+  /* Afegeix padding al cos per evitar que el contingut toqui els costats */
+}
+
+/* Centra el text de tots els títols i paràgrafs */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-align: center;
+  margin-bottom: 30px;
+  /* Afegeix una mica d'espai per sota de cada títol/paràgraf */
+
+}
+
+/* Estils per a la navegació */
+nav {
+  text-align: center;
+  /* Això centra els enllaços si són dins de la nav */
+  margin-bottom: 40px;
+  /* Afegeix espai per sota de la navegació */
+}
+
+nav a {
+  text-decoration: none;
+  color: #5CDB95;
+  /* Canvia aquest color pel que més t'agradi */
+  margin: 0 10px;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #379683;
+  /* Canvia aquest color pel que més t'agradi */
+  color: white;
+  border-radius: 5px;
+  /* Afegeix arrodoniment als botons */
+  transition: background-color 0.3s;
+  /* Afegeix una transició suau al canviar de color */
+}
+
+/* Estils per a les seccions */
+section {
+  margin-bottom: 40px;
+  /* Afegeix espai entre seccions */
+}
+
+/* Estils per als títols de les seccions */
+.section-title {
+  font-size: 2em;
+  /* Aumenta la grandària dels títols de secció */
+  margin-bottom: 30px;
+  /* Afegeix espai per sota del títol de secció */
+}
+
+/* Estils per als elements dins de cada secció */
+.section-item {
+  margin-bottom: 20px;
+  /* Afegeix espai per sota de cada element */
+  padding: 10px;
+  /* Afegeix padding dins de cada element */
+  border-bottom: 2px solid #8ee4af;
+  /* Afegeix una línia per sota de cada element */
+}
+
+main li {
+  background-color: #f0f0f0;
+  /* Fons clar per als quadradets, canvieu per qualsevol color que preferiu */
+  border: 1px solid #cccccc;
+  /* Borde lleuger per a cada quadradet */
+  border-radius: 8px;
+  /* Borde arrodonit */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra suau per a profunditat */
+  padding: 15px;
+  /* Espaiat dins de cada quadradet */
+  /*width: calc(20% - 40px); /* Assigna el ample per a tres elements per fila, ajustant el gap */
+  display: flex;
+  /* Estableix un contenidor flex per al `li` */
+  flex-direction: column;
+  /* Organitza els elements secundaris en columna */
+  align-items: flex-start;
+  /* Alinea els elements secundaris a l'inici de l'eix creuat */
+}
+
+/* Estils per al títol de cada element de la llista */
+li>span {
+  font-weight: bold;
+  /* Fa el text del títol més gras */
+}
+
+/* Estils per a la descripció */
+li>i {
+  display: block;
+  /* Assegura que la descripció es mostra com un bloc */
+  margin-top: 5px;
+  /* Espai entre el títol i la descripció */
+}
+
+main ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  /* Crea columnes que s'adapten al contingut amb una amplada mínima i màxima */
+  justify-content: center;
+  /* Centra els elements en la grid quan no omplen tota la fila */
+  grid-gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  /* Centra la llista en la pàgina amb un marge automàtic */
+  max-width: 1200px;
+  /* Màxima amplada de la llista per evitar que els elements s'estiren massa en pantalles grans */
+}
+
+header h1,
+h2 {
+  padding-top: 50px;
+}
+
+.success {
+  background-color: #379683;
+  /* Canvia aquest color pel que més t'agradi */
+  color: white;
+  padding: 100px;
+  /* Espaiat intern */
+  margin: 50px 0;
+  /* Margin superior i inferior */
+  border-radius: 10px;
+  /* Racons arrodonits */
+  font-weight: bold;
+  /* Text en negreta */
+  text-align: center;
+  /* Text centrat */
+  font-size: xx-large;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  /* Ombra lleugerament elevada */
+}
+
+.home-button {
+  display: inline-block;
+  color: white;
+  /* Canvia això pel color de text que prefereixis */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  /* Ajusta la mida de la font segons necessitis */
+}
+
+.categories {
+
+  background-color: #085445;
+  margin-top: 0%;
+
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(47, 168, 128, 0.74);
+  color: white;           /* Text blanc */
+  font-family: 'Arial', sans-serif; /* Tipus de lletra (pots canviar-ho per la teva preferida) */
+  text-align: center;     /* Centrar el text horitzontalment */
+  padding: 20px 0;        /* Padding a dalt i a baix per centrar verticalment */
+  font-size: 16px;        /* Mida de la lletra */
+  /* Color de fons, canvia segons el teu disseny */
+  /* Altres estils del footer */
+}
+
+body {
+  padding-bottom: 50px; /* Ajusta aquest valor a l'alçada del teu footer */
+}
+
+.afegir{
+  background-color: rgba(47, 168, 128, 0.74); /* Color de fons verd */
+  color: white;             /* Text blanc */
+  padding: 10px 15px;       /* Padding per fer el botó més gran */
+  border: none;             /* Sense bordes */
+  border-radius: 5px;       /* Racons arrodonits */
+  cursor: pointer;          /* Cursor en forma de mà al passar per sobre */
+  font-size: 16px;          /* Mida de la lletra */
+}
+
+.afegir:hover {
+  background-color: #379683; /* Un verd una mica més fosc quan es passa per sobre */
+}
+
+.camp-numero {
+  padding: 5px;             /* Padding per a un millor tacte */
+  border: 2px solid #ddd;   /* Bordes lleugerament destacats */
+  border-radius: 5px;       /* Racons arrodonits */
+  margin-right: 5px;        /* Margen a la dreta */
+  font-size: 16px;          /* Mida de la lletra */
+  width: 50px;              /* Amplada fixa */
+}
+.centrar{
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
